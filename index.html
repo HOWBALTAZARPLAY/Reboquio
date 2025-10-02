@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reboquio Baltazar - Bio</title>
+</head>
+<body>
+  <header>
+    <h1>Reboquio Baltazar</h1>
+    <p>IT Student • Programmer • Game Developer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <div id="about" class="card">
+      <div class="profile-img">
+        <img src="https://scontent.fmnl9-3.fna.fbcdn.net/v/t39.30808-6/512676719_24252464897724369_8557623104230081550_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFmsn1G8bvSkEBOBgqcN-7chU_KmK_Gs8aFT8qYr8azxvsbqK9LfftxWDI4NtrcJQIWIrSFzWKFNXrs1wr9tFbG&_nc_ohc=r5oPBrNnnakQ7kNvwFIPfF8&_nc_oc=AdlHrwQgF4E1hh6v0tIOCtlaiPpr1qh8pBHyicbHhOoVLab5SKrAmlzvqgXCEoTxyTw&_nc_zt=23&_nc_ht=scontent.fmnl9-3.fna&_nc_gid=8bhiKvWNJxQlVRImpUAcxA&oh=00_AfaNl_rBD6HknCWNGW91x83wlhKTFGAouNbEfRPyAMo9iQ&oe=68E25898" alt="Profile Photo">
+      </div>
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm Reboquio Baltazar, an Information Technology student at ICCT College Cainta.  
+        I enjoy building apps and prototypes. I also do sideline work as a game developer in Roblox,  
+        mainly focusing on JavaScript-based character movement and animations.  
+        I developed a secure voting system for my school as my capstone project.  
+        Outside coding, I enjoy photography and gaming.        
+      </p>
+      <div class="meta">
+        <span>23 years old</span>
+        <span>ICCT College Cainta</span>
+      </div>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>Python</span>
+        <span>SQLite</span>
+      </div>
+    </div>
+    <div id="projects" class="card">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article>
+          <h3>Secure Voting System</h3>
+          <p>A Raspberry Pi-based system with barcode authentication, real-time tally, Flask backend, and React frontend.</p>
+        </article>
+        <article>
+          <h3>Game Development</h3>
+          <p>Building Roblox experiences with a focus on JavaScript-powered character movement and animation systems.</p>
+        </article>
+      </div>
+    </div>
+
+    <div id="contact" class="card">
+      <h2>Contact</h2>
+      <form onsubmit="alert('Form submitted (demo only).'); return false;">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Reboquio Baltazar
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #eef2f3, #dfe9f3);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 15px;
+      color: #ddd;
+    }
+    nav {
+      margin-top: 15px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #f1c40f;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    .card {
+      background: #fff;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #2c3e50;
+    }
+    .profile-img {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .profile-img img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #2c3e50;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .skills span, .meta span {
+      display: inline-block;
+      background: #3498db;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin: 5px 5px 0 0;
+      font-size: 13px;
+      transition: background 0.3s;
+    }
+    .skills span:hover {
+      background: #01182e;
+    }
+    .projects article {
+      margin-bottom: 20px;
+    }
+    .projects h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+      color: #34495e;
+      transition: color 0.3s;
+    }
+    .projects h3:hover {
+      color: #e67e22;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      margin-bottom: 12px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    form button {
+      background: #2c3e50;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+    form button:hover {
+      background: #34495e;
+      transform: scale(1.02);
+    }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      margin: 25px 0;
+    }
+  </style>
+</body>
+</html>
+
